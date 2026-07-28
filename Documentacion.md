@@ -26,3 +26,8 @@
     - El comando es 'where py'
     - Busca en las carpetas incluidas en la variable de entorno PATH y muestra
       dónde está el archivo py.exe
+
+- Como salir del modo intérprete interactivo de Python
+    - Con las funciones exit() o quit() 
+    - Y la combinación de teclas (ctrl + z)
+    - Ambas hacen que el intérprete termine y regrese a la terminal.

@@ -1,0 +1,1 @@
+print("\nHola mundo, desde un script en Python.\n")
