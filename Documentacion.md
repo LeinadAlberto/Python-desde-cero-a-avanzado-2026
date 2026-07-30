@@ -31,3 +31,18 @@
     - Con las funciones exit() o quit() 
     - Y la combinación de teclas (ctrl + z)
     - Ambas hacen que el intérprete termine y regrese a la terminal.
+
+- ¿Qué es una convención?
+    - Una convención es un conjunto de reglas o recomendaciones que la mayoria
+      de los programadores acepta seguir para escribir código de manera uniforme. 
+    - No son reglas obligatorias del lenguaje, sino buenas prácticas.
+    - En Python existe el documento oficial llamado PEP 8(Python Enhancement Proposal 8).
+      que significa (Propuesta de Mejora de Python número 8).
+    - Otras convenciones de nombres
+        
+        Convención          Ejemplo                 Uso Común
+
+        snake_case          precio_total            Variables, funciones y archivos en Python
+        camelCase           precioTotal             Muy común en JavaScript y Java
+        PascalCase          PrecioTotal             Clases en Python y otros lenguajes
+        UPPER_CASE          MAX_INTENTOS            Constantes en Python

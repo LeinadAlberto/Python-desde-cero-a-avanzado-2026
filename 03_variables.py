@@ -25,3 +25,11 @@ print(type(edad)) # <class 'int'>
 fecha_nacimiento = "23/08/2026"
 print(fecha_nacimiento) # 23/08/2026
 print(type(fecha_nacimiento)) # <class 'str'>
+
+# Definición de variables siguiendo la propuesta (PEP 484)
+# Anotaciones de Tipos en Python
+apellido: str = "Canaviri"
+estatura: float = 1.64
+
+print(apellido)
+print(estatura)
