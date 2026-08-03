@@ -1,9 +1,20 @@
 """
-    Los operadores logicos son 3: 
-        and
-        or
-        not
-    Al utilizarlos se tiene como resultado un valor Booleano, True o False.
+    Operadores lógicos en Python.
+
+    Python dispone de tres operadores lógicos:
+
+    - and:  Devuelve True únicamente si todas las expresiones evaluadas son True.
+            Si al menos una expresión es False, el resultado será False.
+
+    - or:   Devuelve True si al menos una de las expresiones evaluadas es True.
+            Solo devuelve False cuando todas las expresiones son False.
+
+    - not:  Niega (invierte) un valor booleano.
+            True  -> False
+            False -> True
+
+    Los operadores lógicos siempre producen un valor booleano (True o False) cuando
+    se utilizan para evaluar expresiones lógicas.
 """
 
 number_one = 10
@@ -41,12 +52,19 @@ number_two = 20
 #    or number_two > 200
 # ) # True
 
-result = (
-   False 
-   or False 
-   or number_one == number_two 
-   or number_one < 100 
-   or number_two > 200
+# result = (
+#    False 
+#    or False 
+#    or number_one == number_two 
+#    or number_one < 100 
+#    or number_two > 200
+# ) # True
+
+result = not (
+   (number_one == number_two and True) 
+   and (number_one < 100)  
+   and (number_two < 100)  
+   or (number_one > 100 and number_two > 200) 
 ) # True
 
 print()
