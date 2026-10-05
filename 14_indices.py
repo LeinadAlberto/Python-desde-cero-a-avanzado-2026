@@ -35,7 +35,6 @@ print("El ultimo elemento de la lista es: ", last_value) # MongoDB
 
 # Existe una forma mucho mas paytonica para obtener el ultimo elemento de la lista.
 # Usando los indices negativos.
-
 last_value_2 = courses[-1]
 print("El ultimo elemento de la lista es: ", last_value_2) # MongoDB
 
