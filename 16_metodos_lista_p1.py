@@ -17,6 +17,7 @@
             remove() : Este método recibe como argumento el elemento que queremos quitar de la Lista.
             pop()    : Retorna el ultimo elemento de la Lista y lo elimina de la Lista, tambien se lo puede usar
                        pasando como argumento el indice del elemento a eliminar y obtener.
+            clear()  : Elimina todos los elementos de la Lista dejando una Lista vacia.
 """
 #            -5         -4       -3      -2        -1
 #             0          1        2       3         4
@@ -82,3 +83,7 @@ print(fruits) # ['Manzana', 'Platano', 'Mango', 'Frutilla']
 first_element = fruits.pop(0)
 print(first_element) # Manzana
 print(fruits) # ['Platano', 'Mango', 'Frutilla']
+
+""""" Método Clear - (nombreLista.clear()) """""  
+fruits.clear()
+print(fruits)
