@@ -1,6 +1,6 @@
 """
     -   Las Listas son objetos mutables, es decir en tiempo de ejecución nosotros
-        podemos modificar sus longitudes, ya sea incrementandolas o decreciendolas.
+        podemos modificar sus longitudes, ya sea incrementándolas o decrementándolas.
     -   Utilizaremos un par de métodos para modificar la Lista.
     -   Métodos para añadir nuevos elementos a una Lista en tiempo de ejecución: 
             append() : Nos permite añadir un nuevo elemento al final de la lista.
@@ -8,23 +8,29 @@
                        el primero argumento es un número entero que hace referencia al indice donde queremos
                        añadir el elemento y el segundo argumento es el elemento que queremos añadir a la lista.
             extend() : Nos permite extender nuestra lista a partir de otra lista.
-    -   Formas para saber si un elemento se encuentra o no dentro de una Lista.
+    -   Métodos para saber si un elemento se encuentra o no dentro de una Lista.
             in : Nos permite saber si un elemento se encuentra dentro una Lista, si el elemento existe nos
                  retorna un valor booleano en este caso True.
             index: Retorna el valor del indice de un elemento en el caso se encuentra en la Lista, caso contrario
                    retorna un mensaje de error indicando que el elemento no se encuentra en la Lista.
+    -   Métodos para eliminar elementos de una Lista.
+            remove() : Este método recibe como argumento el elemento que queremos quitar de la Lista.
+            pop()    : Retorna el ultimo elemento de la Lista y lo elimina de la Lista, tambien se lo puede usar
+                       pasando como argumento el indice del elemento a eliminar y obtener.
 """
 #            -5         -4       -3      -2        -1
 #             0          1        2       3         4
 courses = ["Python", "Django", "Flask", "Ruby", "MongoDB"] # String (5)
 
-""" Método Append - lista.append(elemento) """
+
+""""" Método Append - lista.append(elemento) """""
 courses.append("Ruby on Rails")
 courses.append("PHP")
 courses.append("Laravel")
 # print(courses) # ['Python', 'Django', 'Flask', 'Ruby', 'MongoDB', 'Ruby on Rails', 'PHP', 'Laravel']
 
-""" Método Insert - lista.insert(indice, elemento) """
+
+""""" Método Insert - lista.insert(indice, elemento) """""
 courses.insert(0, "Rust") # Añade el elemento de Texto "Rust" en la posición con indice 0 de la Lista.
 # print(courses) # ['Rust', 'Python', 'Django', 'Flask', 'Ruby', 'MongoDB', 'Ruby on Rails', 'PHP', 'Laravel']
 courses.insert(4, "C#") # Añade el elemento de Texto "C#" en la posición con indice 4 de la Lista.
@@ -33,7 +39,8 @@ courses.insert(2, "MySQL") # Añade el elemento de Texto "MySQL" en la posición
 # print(courses) 
 # ['Rust', 'Python', 'MySQL', 'Django', 'Flask', 'C#', 'Ruby', 'MongoDB', 'Ruby on Rails', 'PHP', 'Laravel']
 
-""" Método Extend - lista.extend(new_list) """
+
+""""" Método Extend - lista.extend(new_list) """""
 # Defino una lista de nuevos cursos
 new_courses = ["React", "Next"]
 
@@ -46,12 +53,32 @@ print(courses)
 
 print(f"El tamaño de la lista es {len(courses)}") # El tamaño de la lista es 13
 
-""" Método in - (nombreValor in nombreLista) """
+
+""""" Método In - (nombreValor in nombreLista) """""
 print("Python" in courses) # True | El String "Python" si se encuentra en la Lista courses
 print("Vue" in courses) # False | El String "Vue" no se encuentra en la Lista courses)
 
-""" Método index - (nombreLista.index(nombreValor)) """
+
+""""" Método Index - (nombreLista.index(nombreValor)) """""
 print(courses.index("Python")) # 1 | Retorna el valor del indice que ocupa el String "Python"
 print(courses.index("Ruby")) # 6 | Retorna el valor del indice que ocupa el String "Ruby"
-print(courses.index("Vue")) # ValueError: 'Vue' is not in list | Mensaje de error indicando que no se encontro el 
-                            # el elemento en la Lista
+# print(courses.index("Vue")) # ValueError: 'Vue' is not in list | Mensaje de error indicando que no se encontro el 
+
+# Creemos otra Lista como ejemplo
+fruits = ["Manzana", "Pera", "Platano", "Mango", "Frutilla", "Uva"]
+print(fruits) # ['Manzana', 'Pera', 'Platano', 'Mango', 'Frutilla', 'Uva']
+
+
+""""" Método Remove - (nombreLista.remove(nombreValor)) """""                          # el elemento en la Lista
+fruits.remove("Pera")
+print(fruits) # ['Manzana', 'Platano', 'Mango', 'Frutilla', 'Uva']
+
+""""" Método Pop - (nombreLista.pop(), nombreLista.pop(indice)) """""  
+last_element = fruits.pop()
+print(last_element) # Uva
+print(fruits) # ['Manzana', 'Platano', 'Mango', 'Frutilla']
+
+# Tambien se puede eliminar un elemento dando el indice
+first_element = fruits.pop(0)
+print(first_element) # Manzana
+print(fruits) # ['Platano', 'Mango', 'Frutilla']
